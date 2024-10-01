@@ -1,0 +1,6 @@
+POST http://localhost:3311/auth
+Content-Type: application/json
+
+{
+    "username": "daniel"
+}

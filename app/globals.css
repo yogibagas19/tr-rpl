@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+    .no-spinner {
+      -moz-appearance: textfield;
+    }
+
+    .no-spinner::-webkit-outer-spin-button,
+    .no-spinner::-webkit-inner-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+  }
+
+/* headers */
+.container-headers {
+  background-color: #5b5b5b;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.menu-headers {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  right: 20%;
+  top: 5%;
+  a {
+    font-size: 20px;
+    color: white;
+
+    &:hover {
+      opacity: 30%;
+    }
+  }
+}
+
+.icon-headers {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  right: 5%;
+  top: 35px;
+  a:hover {
+    opacity: 30%;
+  }
+}
+
+/* Footers */
+.container-footers {
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+  background-color: #5b5b5b;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0px;
+  color: white;
+
+  .judulFooter {
+    font-weight: 600;
+  }
+
+  .footerKiri {
+    display: flex;
+    /* color: white; */
+  }
+  .copyFooter {
+    /* position: absolute;
+    right: 2%;
+    top: 75%; */
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* color:white; */
+  }
+}
+
+/* carousel */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* page pembayaran */
+.wrapperPesan {
+  background-color: #c8c8c8;
+  height: 100vh;
+
+  .gambarPembayaran {
+    opacity: 90%;
+    width: 100vw;
+    height: 400px;
+    position: relative;
+    filter: brightness(50%);
+  }
+
+  .judulPesan {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    .garisPesan {
+      width: 2px;
+      height: 50px;
+      background-color: white;
+    }
+
+    .checkoutJudul{
+      font-size: 64px;
+      color: white;
+    }
+
+    .checkoutPesan{
+      font-size: 32px;
+      color: white;
+    }
+  }
+
+  .wrapperCount{
+
+  }
+}
